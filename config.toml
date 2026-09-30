@@ -1,0 +1,39 @@
+[audio]
+sample_rate = 16000
+denoise = false
+device = "システム既定"
+
+[vad]
+min_silence_sec = 0.6
+
+[asr]
+model = "small.en"
+compute_type = "int8"
+
+[phoneme]
+model = "facebook/wav2vec2-lv-60-espeak-cv-ft"
+min_confidence = 0.6
+
+[intent]
+lm = "distilgpt2"
+min_delta_logprob = 3.0
+lexicon_size = 30000
+min_zipf = 3.0
+
+[local_mode]
+practice = "post_analysis"
+ollama_model = "llama3.2:3b"
+max_reply_words = 40
+turn_silence_sec = 1.2
+
+[tutor]
+asr_model = "base.en"
+min_confidence = 0.75
+strength = "focus"
+max_retries = 2
+no_repeat_turns = 3
+pron_categories = ["R_L", "TH", "V_B", "VOWEL", "EPENTHESIS", "F_H"]
+
+[tts]
+piper_exe = "piper"
+piper_voice = "data/voices/en/en_US/lessac/medium/en_US-lessac-medium.onnx"

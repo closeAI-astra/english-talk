@@ -1,0 +1,9 @@
+data/
+exports/
+.venv/
+__pycache__/
+.gradio/
+*.pyc
+tests/audio/*.wav
+tests/audio_results.csv
+.pytest_cache/

@@ -1,0 +1,31 @@
+[project]
+name = "english-talk"
+version = "0.1.0"
+requires-python = ">=3.11,<3.13"
+dependencies = [
+  "gradio>=6,<7",
+  "numpy>=1.26,<3",
+  "scipy>=1.12",
+  "sounddevice>=0.5",
+  "soundfile>=0.12",
+  "faster-whisper>=1.1",
+  "silero-vad>=5.1",
+  "torch>=2.3",
+  "transformers>=4.46,<5",
+  "huggingface-hub>=0.26",
+  "phonemizer-fork>=3.3",
+  "espeakng-loader>=0.2",
+  "language-tool-python>=2.8",
+  "wordfreq>=3.1",
+  "matplotlib>=3.8",
+  "pandas>=2.0",
+  "piper-tts>=1.8.0",
+]
+
+[tool.uv]
+package = false
+
+[dependency-groups]
+dev = [
+    "pytest>=9.1.1",
+]
